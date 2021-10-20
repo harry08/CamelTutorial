@@ -1,0 +1,7 @@
+target
+data/output/*
+.idea
+.classpath
+.project
+.settings
+.metadata
