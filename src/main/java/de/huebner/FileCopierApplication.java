@@ -26,7 +26,7 @@ public class FileCopierApplication {
                             // Depending on the file suffix the file is copied to a different folder
                             .choice()
                             .when(header("CamelFileName").endsWith(".xml"))
-                            .log(LoggingLevel.INFO, "File is of type xml")
+                            .log(LoggingLevel.INFO, "Received file: ${header.CamelFileName} is of type xml")
                             .to("file:{{outputFolderXml}}")
                             .when(header("CamelFileName").endsWith(".csv"))
                             .to("file:{{outputFolderCsv}}")
