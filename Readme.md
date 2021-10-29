@@ -1,12 +1,18 @@
-# Camel Tutorial
+# Apache Camel Tutorial
+
+## Overview
+
+Tutorial project to show the usage of Apache Camel.
 
 ## Uses the following Camel Concepts
 
 - Files
 - Properties
-- Processor
+- Processor 
+- Beans
 - Content Based Router
 - Logging
+- Camel JUnit testing
 
 ## Documentation and Source
 

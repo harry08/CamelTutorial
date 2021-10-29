@@ -57,6 +57,11 @@
             <artifactId>spi-annotations</artifactId>
             <version>${camel-version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-test</artifactId>
+            <version>${camel-version}</version>
+        </dependency>
 
         <!-- Logging -->
         <dependency>
