@@ -1,4 +1,4 @@
-package de.huebner;
+package cameltutorial;
 
 import org.apache.camel.LoggingLevel;
 import org.apache.camel.builder.RouteBuilder;

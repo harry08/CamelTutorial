@@ -1,8 +1,6 @@
-package de.huebner;
+package cameltutorial;
 
 import org.apache.camel.CamelContext;
-import org.apache.camel.LoggingLevel;
-import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.properties.PropertiesComponent;
 import org.apache.camel.impl.DefaultCamelContext;
 
