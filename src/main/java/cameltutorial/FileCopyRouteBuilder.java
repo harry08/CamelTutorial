@@ -4,7 +4,8 @@ import org.apache.camel.LoggingLevel;
 import org.apache.camel.builder.RouteBuilder;
 
 /**
- * Copies files from a given folder to another folder
+ * Copies files from a given folder to another folder.
+ * Needs properties to be set like outputFolderXml.
  */
 public class FileCopyRouteBuilder extends RouteBuilder {
 

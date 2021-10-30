@@ -5,7 +5,7 @@ import org.apache.camel.component.properties.PropertiesComponent;
 import org.apache.camel.impl.DefaultCamelContext;
 
 /**
- * Copies files from a given folder to another folder
+ * Copies files from a given folder to another folder.
  */
 public class FileCopierApplication {
 
