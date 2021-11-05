@@ -32,6 +32,8 @@ Tutorial project to show the usage of Apache Camel.
 - Create a REST service with Camel and Spring Boot - https://tomd.xyz/camel-rest/
 - Getting started with Camel and Spring Boot - https://reflectoring.io/spring-camel/
 - Using Swagger with Rest DSL - Book chapter 10.3.2
+- Kamel k Github Project - https://github.com/baloise-incubator/camel-k-examples
+
 
 ### Book Camel in Action
 
