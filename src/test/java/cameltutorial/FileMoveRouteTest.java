@@ -2,8 +2,11 @@ package cameltutorial;
 
 import org.apache.camel.Exchange;
 import org.apache.camel.builder.RouteBuilder;
-import org.apache.camel.test.junit4.CamelTestSupport;
-import org.junit.Test;
+import org.apache.camel.test.junit5.CamelTestSupport;
+import org.apache.camel.test.junit5.TestSupport;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -16,11 +19,11 @@ public class FileMoveRouteTest extends CamelTestSupport {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(FileMoveRouteTest.class);
 
-    public void setUp() throws Exception {
+    @BeforeEach
+    public void cleanDirectories() {
         LOGGER.info("delete inbox and outbox directories");
-        deleteDirectory("target/inbox");
-        deleteDirectory("target/outbox");
-        super.setUp();
+        TestSupport.deleteDirectory("target/inbox");
+        TestSupport.deleteDirectory("target/outbox");
     }
 
     @Override
@@ -38,8 +41,8 @@ public class FileMoveRouteTest extends CamelTestSupport {
 
         // Verify that file is copied.
         File expectedFile = new File("target/outbox/hello.txt");
-        assertTrue("File not moved", expectedFile.exists());
+        Assertions.assertTrue(expectedFile.exists());
         String expectedContent = context.getTypeConverter().convertTo(String.class, expectedFile);
-        assertEquals("Hello World", expectedContent);
+        Assertions.assertEquals("Hello World", expectedContent);
     }
 }

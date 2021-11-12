@@ -1,16 +1,16 @@
 package cameltutorial;
 
 import org.apache.camel.builder.RouteBuilder;
-import org.apache.camel.test.junit4.CamelTestSupport;
-import org.junit.Assert;
-import org.junit.Test;
+import org.apache.camel.test.junit5.CamelTestSupport;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class InvokeWithProcessorRouteTest extends CamelTestSupport {
 
     @Test
     public void testHello() {
         String reply = template.requestBody("direct:hello", "Camel in action", String.class);
-        Assert.assertEquals("Hello Camel in action", reply);
+        Assertions.assertEquals("Hello Camel in action", reply);
     }
 
     @Override

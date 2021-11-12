@@ -6,10 +6,10 @@ import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.impl.DefaultCamelContext;
 import org.apache.camel.spi.Registry;
 import org.apache.camel.support.DefaultRegistry;
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Using {@link org.apache.camel.support.SimpleRegistry} as the Camel {@link org.apache.camel.spi.Registry}
@@ -22,7 +22,7 @@ public class SimpleRegistryTest {
     /**
      * Starts Camel with the route "diret:hello"
      */
-    @Before
+    @BeforeEach
     public void setUp() throws Exception {
         // Create the registry to be the DefaultRegistry which is by default using the SimpleRegistry
         Registry registry = new DefaultRegistry();
@@ -50,7 +50,7 @@ public class SimpleRegistryTest {
     /**
      * Stops Camel after test
      */
-    @After
+    @AfterEach
     public void tearDown() throws Exception {
         template.stop();
         camelContext.stop();
@@ -63,7 +63,7 @@ public class SimpleRegistryTest {
     @Test
     public void testHello() throws Exception {
         Object reply = template.requestBody("direct:hello", "World");
-        Assert.assertEquals("Hello World", reply);
+        Assertions.assertEquals("Hello World", reply);
     }
 }
 
